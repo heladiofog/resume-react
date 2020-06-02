@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-
+const FaviconWebPackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',  // punto de entrada
@@ -33,8 +33,9 @@ module.exports = {
   // Generar lo que se envía a producción
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/public/index.html",
+      template: "./public/index.html",
       file: "./index.html",
-    })
+    }),
+    new FaviconWebPackPlugin('./public/di.png'),
   ]
 }
