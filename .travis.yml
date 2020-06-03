@@ -1,7 +1,7 @@
 language: node_js
 cache:
   npm: false
-node_js: '12'
+node_js: 12
 git:
   depth: 3
 script:
@@ -9,10 +9,10 @@ script:
   - echo 'url-personalizada.com' > public/CNAME
 deploy:
   provider: pages
-  skip_cleanup: false
-  # keep_history: true
+  skip_cleanup: true
+  keep_history: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist
+  local_dir: dist/
   target_branch: master
   commit_message: "Deploy release ${TRAVIS_TAG}"
   on:
