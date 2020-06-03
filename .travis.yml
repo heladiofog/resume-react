@@ -6,10 +6,10 @@ git:
   depth: 3
 script:
   - yarn build
-  # - echo 'url-personalizada.com' > public/CNAME
+  - echo 'url-personalizada.com' > public/CNAME
 deploy:
   provider: pages
-  cleanup: false
+  skip_cleanup: false
   keep_history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
