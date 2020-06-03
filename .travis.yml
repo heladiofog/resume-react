@@ -9,7 +9,7 @@ script:
   # - echo 'url-personalizada.com' > public/CNAME
 deploy:
   provider: pages
-  cleanup: true
+  cleanup: false
   keep_history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
