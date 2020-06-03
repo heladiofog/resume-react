@@ -10,7 +10,7 @@ module.exports = {
   },
   // con qué archivos vamos a trabajar
   resolve: {
-    extensions: ['.jsx',  '.js']
+    extensions: ['.jsx', '.js']
   },
   // reglas del projecto
   module: {
